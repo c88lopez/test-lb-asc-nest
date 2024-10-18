@@ -8,7 +8,7 @@ export class AppService {
   async getHello(): Promise<string> {
     this.logger.log('getHello()');
 
-    const iamClient = new IAMClient({ region: 'sa-east-1' });
+    const iamClient = new IAMClient();
 
     const response = await iamClient.send(new ListUsersCommand());
 
@@ -16,7 +16,9 @@ export class AppService {
 
     this.logger.log('userList: ' + JSON.stringify(userList));
 
-    for (let i = 0; i < 1000000; i++) {}
+    for (let i = 0; i < 10000000; i++) {
+      console.log(i);
+    }
 
     return 'Hello World!';
   }
