@@ -16,7 +16,7 @@ export class AppService {
 
     this.logger.log('userList: ' + JSON.stringify(userList));
 
-    for (let i = 0; i < 100000; i++) {}
+    for (let i = 0; i < 1000000; i++) {}
 
     return 'Hello World!';
   }
