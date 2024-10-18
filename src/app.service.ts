@@ -5,7 +5,7 @@ import { Injectable, Logger } from '@nestjs/common';
 export class AppService {
   private readonly logger = new Logger(AppService.name);
 
-  async getHello(): Promise<string> {
+  async getHello(loopCount: number): Promise<string> {
     this.logger.log('getHello()');
 
     // const iamClient = new IAMClient({ region: 'sa-east-1' });
@@ -16,7 +16,7 @@ export class AppService {
 
     // this.logger.log('userList: ' + JSON.stringify(userList));
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < loopCount; i++) {
       console.log(i);
     }
 
