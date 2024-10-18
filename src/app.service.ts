@@ -8,7 +8,7 @@ export class AppService {
   async getHello(): Promise<string> {
     this.logger.log('getHello()');
 
-    const iamClient = new IAMClient();
+    const iamClient = new IAMClient({ region: 'sa-east-1' });
 
     const response = await iamClient.send(new ListUsersCommand());
 
