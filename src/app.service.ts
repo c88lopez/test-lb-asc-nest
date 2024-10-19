@@ -1,3 +1,5 @@
+import { hostname } from 'node:os';
+
 import { Injectable, Logger } from '@nestjs/common';
 // import { IAMClient, ListUsersCommand } from '@aws-sdk/client-iam';
 
@@ -20,6 +22,6 @@ export class AppService {
       console.log(i);
     }
 
-    return 'Hello World!';
+    return 'Hello World! ' + hostname();
   }
 }
