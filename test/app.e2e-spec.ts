@@ -25,7 +25,7 @@ describe('AppController (e2e)', () => {
           throw err;
         }
 
-        expect(res.body).toContain('Hello World!');
+        expect(res.body).toContain('Hello World!!');
       });
   });
 });
