@@ -7,6 +7,6 @@ export class AppController {
 
   @Get()
   async getHello(@Query('loop-count') loopCount: string): Promise<string> {
-    return this.appService.getHello(Number(loopCount));
+    return this.appService.getHello(loopCount ? Number(loopCount) : 10);
   }
 }
